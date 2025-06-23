@@ -1,7 +1,5 @@
 import mysql from 'mysql2/promise';
 
-const mariadb = require('mariadb');
-
 //db연결정보
 const pool = mysql.createPool({
   host:process.env.DB_HOST,
