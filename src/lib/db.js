@@ -2,7 +2,7 @@ import mysql from 'mysql2/promise';
 
 //db연결정보
 const pool = mysql.createPool({
-  host:'database',
+  host:'svc.sel4.cloudtype.app',
   user:'root',
   password:'1234',
   database:'kdt',
