@@ -1,14 +1,15 @@
 import mysql from 'mysql2/promise';
 
+const mariadb = require('mariadb');
+
 //db연결정보
 const pool = mysql.createPool({
-  host:'svc.sel4.cloudtype.app',
-  user:'root',
-  password:'1234',
-  database:'kdt',
-  waitForConnections:true, //연결 개수가 풀일 때 기다리게... 
+  host:process.env.DB_HOST,
+  port:process.env.DB_PORT || 3306,
+  user:process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
   connectionLimit:10, //연결 최대 수
-  queueLimit:0, //대기 요청수 '0'이면 무제한
 });
 
-export const db = pool;
+module.exports = pool;
