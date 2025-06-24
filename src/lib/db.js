@@ -10,4 +10,4 @@ const pool = mysql.createPool({
   connectionLimit:10, //연결 최대 수
 });
 
-module.exports = pool;
+export default pool;
