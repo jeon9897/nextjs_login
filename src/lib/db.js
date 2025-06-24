@@ -1,7 +1,7 @@
 import mysql from 'mysql2/promise';
 
 //db연결정보
-const pool = mysql.createPool({
+const db = mysql.createPool({
   host:process.env.DB_HOST,
   port:process.env.DB_PORT || 31573,
   user:process.env.DB_USER,
@@ -10,4 +10,4 @@ const pool = mysql.createPool({
   connectionLimit:10, //연결 최대 수
 });
 
-export default pool;
+export default db;
