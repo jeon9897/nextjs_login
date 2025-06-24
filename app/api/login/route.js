@@ -1,4 +1,4 @@
-import db from '@/lib/db';
+import {db} from '@/lib/db';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
