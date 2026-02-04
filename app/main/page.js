@@ -1,9 +1,12 @@
 'use client'; //Next.js 13버전부터 App Router에서 도입된 'client 
+import '../css/main.css';
 
 function Main(props) {
   return (
     <main>
-      메인영역
+      <section className="slide">
+        <img src='/images/slide1.jpg' alt="메인배너" />
+      </section>
     </main>
   );
 }

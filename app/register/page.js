@@ -51,20 +51,29 @@ function RegisterPage(props) {
   }
 
   return (
-    <section>
+    <section className="login-container">
       <h2>회원가입</h2>
       <form onSubmit={handleSubmit}>
         <p>
           <label htmlFor="username">아이디 : </label>
-          <input type="text" id="username" name="username" placeholder='아이디' required onChange={handleChange} value={form.username} />
+          <input type="text" id="username" name="username" placeholder='아이디' 
+          className="input-box"
+          required onChange={handleChange} value={form.username} />
         </p>
         <p>
           <label htmlFor="password">패스워드</label>
-          <input type="password" id="password" name="password" required onChange={handleChange} value={form.password} />
+          <input type="password" id="password" name="password" 
+          placeholder="패스워드"
+          required
+          className="input-box" 
+          onChange={handleChange} value={form.password} />
         </p>
+
         <p>
-          <input type="submit" value="가입하기" />
-          &nbsp; &#10072; &nbsp;
+          <input type="submit" value="가입하기" className="join-button" />
+        </p>
+
+        <p className="btn-group">
           <Link href='/'>홈으로</Link>&nbsp; &#10072; &nbsp;
           <Link href='/login'>로그인</Link>
         </p>

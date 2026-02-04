@@ -42,25 +42,45 @@ function Loginpage() {
   };
   
   return (
-    <section>
+    <section className="login-container">
       <h2>로그인</h2>
       <form onSubmit={handleSubmit} >
         <p>
           <label htmlFor="username">아이디 :</label>
-          <input type="text" id="username" name="username" placeholder='아이디' required onChange={handleChange} />
+          <input type="text" 
+            id="username" 
+            name="username" 
+            placeholder='아이디' 
+            required 
+            onChange={handleChange} 
+            className="input-box" 
+          />
         </p>
         <p>
           <label htmlFor="password">패스워드 : </label>
-          <input type="password" id="password" name="password" placeholder='패스워드' required onChange={handleChange} />
+          <input 
+            type="password" 
+            id="password" 
+            name="password"
+            placeholder='패스워드' 
+            required 
+            onChange={handleChange}
+            className="input-box"   
+          />
         </p>
         <p>
-          <input type="submit" value="로그인" />
+          <input 
+            type="submit" 
+            value="로그인" 
+            className="login-button"
+          />
         </p>
 
-        <Link href="/idsearch">아이디 찾기</Link> &#10072; &nbsp;
-        <Link href="/pwsearch">비번 찾기</Link> &#10072; &nbsp;
-        <Link href="/register">회원가입</Link>
-
+        <p className="btn-group">
+          <Link href="/idsearch">아이디 찾기</Link> &#10072; &nbsp;
+          <Link href="/pwsearch">비번 찾기</Link> &#10072; &nbsp;
+          <Link href="/register">회원가입</Link>
+        </p>
       </form>
     </section>
   );

@@ -1,3 +1,8 @@
+import Header from './header/page';
+import Footer from './footer/page';
+import './css/reset.css';
+import './css/common.css';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -8,9 +13,11 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
       </head>
-      
+
       <body>
-        {children}
+        <Header />
+          {children}
+        <Footer />
       </body>
     </html>
   );
